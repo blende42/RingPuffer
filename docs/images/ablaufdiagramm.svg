@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="760" viewBox="0 0 1320 760">
+  <style>
+    .title { font: 700 24px sans-serif; fill: #102a43; }
+    .box { fill: #f8fafc; stroke: #334e68; stroke-width: 2; rx: 12; }
+    .decision { fill: #fff7ed; stroke: #c05621; stroke-width: 2; }
+    .text { font: 15px sans-serif; fill: #243b53; }
+    .small { font: 14px sans-serif; fill: #486581; }
+    .arrowBlue { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+    .arrowGreen { stroke: #15803d; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+  </style>
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#15803d" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="100%" height="100%" fill="#000000" />
+  <text x="30" y="40" class="title">Ablaufdiagramm für einfügen() und entnehmen()</text>
+
+  <rect x="70" y="90" width="360" height="50" class="box" />
+  <text x="170" y="122" class="text">Start: einfügen(wert)</text>
+
+  <rect x="70" y="170" width="360" height="60" class="box" />
+  <text x="126" y="206" class="text">Wert an Position schreibIndex speichern</text>
+
+  <rect x="70" y="260" width="360" height="60" class="box" />
+  <text x="148" y="296" class="text">schreibIndex eins weiter setzen</text>
+
+  <polygon points="250,350 355,410 250,470 145,410" class="decision" />
+  <text x="198" y="404" class="text">Puffer bereits</text>
+  <text x="213" y="426" class="text">voll?</text>
+
+  <rect x="70" y="510" width="360" height="55" class="box" />
+  <text x="116" y="544" class="text">Wenn nein: anzahlElemente um 1 erhöhen</text>
+
+  <rect x="70" y="600" width="360" height="55" class="box" />
+  <text x="122" y="634" class="text">Wenn ja: leseIndex eins weiter setzen</text>
+
+  <rect x="840" y="90" width="360" height="50" class="box" />
+  <text x="942" y="122" class="text">Start: entnehmen()</text>
+
+  <polygon points="1020,170 1125,230 1020,290 915,230" class="decision" />
+  <text x="996" y="224" class="text">Puffer</text>
+  <text x="983" y="246" class="text">leer?</text>
+
+  <rect x="840" y="330" width="360" height="55" class="box" />
+  <text x="888" y="364" class="text">Wenn ja: IllegalStateException werfen</text>
+
+  <rect x="840" y="430" width="360" height="55" class="box" />
+  <text x="914" y="464" class="text">Wert an leseIndex lesen</text>
+
+  <rect x="840" y="510" width="360" height="55" class="box" />
+  <text x="896" y="544" class="text">leseIndex eins weiter setzen</text>
+
+  <rect x="840" y="590" width="360" height="55" class="box" />
+  <text x="982" y="624" class="text">anzahlElemente--</text>
+
+  <path d="M250 140 L250 170" class="arrowBlue" />
+  <path d="M250 230 L250 260" class="arrowBlue" />
+  <path d="M250 320 L250 350" class="arrowBlue" />
+  <path d="M250 470 L250 510" class="arrowBlue" />
+  <text x="262" y="494" class="small">nein</text>
+  <path d="M355 410 L450 410 L450 628 L430 628" class="arrowBlue" />
+  <text x="372" y="400" class="small">ja</text>
+
+  <path d="M1020 140 L1020 170" class="arrowGreen" />
+  <text x="1140" y="220" class="small">nein</text>
+  <path d="M1125 230 L1225 230 L1225 458 L1200 458" class="arrowGreen" />
+  <text x="1032" y="316" class="small">ja</text>
+  <path d="M1020 290 L1020 330" class="arrowGreen" />
+  <path d="M1020 485 L1020 510" class="arrowGreen" />
+  <path d="M1020 565 L1020 590" class="arrowGreen" />
+</svg>
