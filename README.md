@@ -1,7 +1,7 @@
 # Ringpuffer
 
 Dieses Projekt zeigt eine einfache Ringpuffer-Implementierung in Standard-Java.
-
+Als Puffer wird ein Array einer festen Grösse verwendet
 ## Inhalt
 
 - `src/`: Java-Quellcode
